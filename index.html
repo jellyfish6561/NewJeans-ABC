@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>跟 NewJeans 一起學 ABC</title>
+  <meta name="theme-color" content="#0a3490">
+  <meta name="description" content="NewJeans一起學ABC：互動英文海報與 A-Z 英文圖卡。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="NewJeans一起學ABC">
+  <meta property="og:description" content="🎲 隨機抽卡 ⭐ 我的收藏 🏆 我的成就 🔍 點選海報上的英文字母，開始學 ABC。">
+  <meta property="og:url" content="https://jellyfish6561.github.io/NewJeans-ABC/">
+  <meta property="og:image" content="https://jellyfish6561.github.io/NewJeans-ABC/line-preview.png?v=20260708">
+  <meta property="og:image:secure_url" content="https://jellyfish6561.github.io/NewJeans-ABC/line-preview.png?v=20260708">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NewJeans一起學ABC">
+  <meta name="twitter:description" content="互動英文海報與 A-Z 英文圖卡。">
+  <meta name="twitter:image" content="https://jellyfish6561.github.io/NewJeans-ABC/line-preview.png?v=20260708">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="NewJeans ABC">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="icon" href="./icon-192.png">
+  <link rel="preload" as="image" href="./images/poster.png">
+  <link rel="preload" as="image" href="./images/01.jpg">
+  <link rel="preload" as="image" href="./images/02.jpg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main id="app">
+  <section id="deskScene" class="screen active">
+    <header class="title">
+      <img class="appMark" src="./icon-192.png" alt="App Icon" loading="eager">
+      <h1>跟 NewJeans 一起學 ABC</h1>
+      <p>Learn English with NewJeans</p>
+    </header>
+    <nav class="topbar">
+      <button id="randomBtn">🎲 隨機抽卡</button>
+      <button id="favoritesBtn">⭐ 我的收藏</button>
+      <button id="achievementBtn">🏆 我的成就</button>
+      <button id="shareBtn">🔗 分享</button>
+      <label class="search"><span>🔍</span><input id="searchInput" placeholder="輸入 A、K、Tokki…"></label>
+    </nav>
+    <div class="desk">
+      <div class="posterPanel">
+        <div class="posterNote">點選海報上的英文字母，可以直接挑出那張圖卡</div>
+        <div id="posterWrap" class="poster loading"><img class="lazy-img" data-src="./images/poster.png" alt="英文海報圖"><div id="posterHotspots"></div></div>
+      </div>
+      <div class="cardsPanel">
+        <div class="cardsNote">英文圖卡</div>
+        <div id="pile" class="pile" aria-label="散放英文圖卡"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="viewer" class="screen viewer">
+    <div class="viewerTop"><button id="homeBtn">🖼 回海報</button><div id="letterTitle">A · Attention</div><button id="favBtn" class="heart">♡</button></div>
+    <div class="stage"><button id="prevBtn" class="navBtn left">‹</button><div id="bigCard" class="bigCard loading"><div class="cardInner"><img id="frontImg" class="face front lazy-img" alt="正面圖卡"><img id="backImg" class="face back lazy-img" alt="背面圖卡"></div></div><button id="nextBtn" class="navBtn right">›</button></div>
+    <div class="controls"><button id="flipBtn">🔄 翻面</button><button id="letterSoundBtn">🔊 Letter</button><button id="wordSoundBtn">🔊 Word</button></div>
+  </section>
+
+  <dialog id="modal"><button id="closeModal" class="close">×</button><div id="modalContent"></div></dialog>
+</main>
+<div class="creditNotice" aria-label="版權與製作說明">
+  英文圖卡由 jellyfish6561 Fanmade(@jellyfish6561) 構思、設計及排版<br>
+  英文海報、網頁由 ChatGPT 製作<br>
+  版權由 NewJeans 所有，不可重製或印製，也不可有販售行為
+</div>
+<script src="./script.js"></script></body></html>
